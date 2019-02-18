@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Word Counter</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <script src="./js/bundle.js"></script>
+  </head>
+  <body>
+
+    <div id="app">
+      <h1>{{ heading }}</h1>
+
+      <p>Input some words:</p>
+      <textarea rows="8" cols="60" v-model="words"></textarea>
+      <button  v-if="words != ''" v-on:click="countWords">Count Words</button>
+      <p v-if="numberOfWords != 0">The phrase contains {{ numberOfWords }} words!</p>
+
+
+    </div>
+
+  </body>
+</html>
